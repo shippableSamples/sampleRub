@@ -21,6 +21,6 @@ rvm:
   - ruby-head
   - ree
 
- build:
+build:
   ci:
     - ruby -v
