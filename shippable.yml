@@ -17,5 +17,11 @@ rvm:
   - ree
 
 build:
+
+  pre_ci_boot:
+    image_name: drydock/u12rub
+    image_tag: prod
+    pull: true  
+    
   ci:
     - ruby -v
