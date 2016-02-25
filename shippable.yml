@@ -16,6 +16,21 @@ rvm:
   - jruby-9.0.0
   - ree
 
+services:
+  - mysql
+  - postgres
+  - elasticsearch
+  - redis
+  - memcache
+  - mongo
+  - rabbitmq
+  
 build:
+
+  pre_ci_boot:
+    image_name: drydock/u14rubpls
+    image_tag: prod
+    pull: true  
+    
   ci:
     - ruby -v
